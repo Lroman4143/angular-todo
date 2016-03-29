@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body data-ng-controller="TodoCtrl">
+    <h1>Angular To Do List App</h1>
+    <form>
+        <input placeholder="Enter List Item Here" type="text" ng-model="placeItemText" ng-model-instant />
+        <button ng-click="addItem()">Add</button>
+      </form>
+    <ul>
+        <li ng-repeat="item in items">
+          <span>{{item.text}}</span>
+        </li>
+    </ul>
+</body>
+</html>
